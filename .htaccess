@@ -1,0 +1,48 @@
+Options -Indexes
+
+# Declare UTF-8 for text/plain (llms.txt, robots.txt) and text/html responses
+AddDefaultCharset UTF-8
+
+# Remove www.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.jwoolson\.com$ [NC]
+RewriteRule (.*) https://jwoolson.com/$1 [R=301,L]
+
+# Cache lifetimes: lift DreamHost's 2-day default on these types
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp                "access plus 30 days"
+  ExpiresByType image/avif                "access plus 30 days"
+  ExpiresByType image/x-icon              "access plus 30 days"
+  ExpiresByType image/vnd.microsoft.icon  "access plus 30 days"
+  ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType font/woff                 "access plus 1 year"
+</IfModule>
+
+# HTML: revalidate on every load so a fresh upload shows on the next reload
+# (DreamHost otherwise serves max-age=600). Images/icons/fonts keep the lifetimes above.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html?$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+
+Redirect permanent /resume /files/Jonathan-Woolson_resume_v47_2026.pdf
+
+Redirect permanent /about https://about.me/jwoolson
+
+Redirect permanent /linkedin https://www.linkedin.com/in/jwoolson
+
+Redirect permanent /youtube https://www.youtube.com/@jwoolson
+
+Redirect permanent /my-fav-ted-talks /ted
+
+Redirect permanent /ted https://docs.google.com/document/d/e/2PACX-1vTYtxemAQg6C-JPS_iQAu4adcDznXvzj9WHMu5eTwHLlE-c-q9k4WyfzI7a57YwjGtLxzYEAssnx9U2/pub
+
+Redirect permanent /ted-edit https://docs.google.com/document/d/1OkYxgDHErtBz1WEqiIMtoHr3xdxqTp5ZWqzkONYshho/edit?tab=t.0#heading=h.muwhfyuwq028
+
+
+# Old PHP page addresses (site went static-only 2026-10-21)
+Redirect permanent /index.php /
+Redirect permanent /contact/index.php /contact/

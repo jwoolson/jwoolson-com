@@ -1,0 +1,45 @@
+# Jonathan H. Woolson
+
+> Jonathan H. Woolson is a web developer and enterprise CMS consultant based in Fredonia, NY, with 20+ years building and managing enterprise-scale Drupal websites, optimizing SEO/GEO, and sustaining WCAG 2.2 AA accessibility and QA standards. He helps universities, nonprofits, and businesses build reliable, accessible websites, and helps their teams keep those sites running.
+
+jwoolson.com is a single-page professional profile and résumé. Key facts:
+
+- University Web Manager at SUNY Fredonia, November 2006 – March 2025. Moved fredonia.edu from static HTML to Drupal and managed 16K+ pages for 178 departments (3.3M annual page views). Kept the broken-link rate at 0.001% across 1.8M links, preserved 18,000+ redirects through site migrations, and trained 240+ campus web editors.
+- Wrote custom Drupal modules that extend schema_metatag with JSON-LD for EducationalCredentialAwarded and EducationalOccupationalProgram.
+- Current consulting work: Jacques Marchais Museum of Tibetan Art (2026–present) and Museum of Reclaimed Urban Space (MoRUS) Omeka/Dublin Core archive (2025–present).
+- Past consulting work: Aaron Gies NY-23 congressional campaign website (2025–2026).
+- Earlier career: freelance web and design work as 10xDesign (2000–2022), Peachpit Press book design, StorageTek, Macworld magazine, and Quark Software.
+- Core skills: Drupal 4–11, PHP, JavaScript, JSON-LD/Schema.org, WCAG 2.2 AA, Siteimprove, GA4/GTM/GSC, Git, DDEV/Lando, and agentic AI tools (Claude Code, Codex, MCP).
+- Education: BFA, Alfred University, School of Art and Design (NYSCC), 1991.
+- Contact: contact@jwoolson.com
+
+## Profile
+
+- [Home / full profile](https://jwoolson.com/): Experience, skills matrix, projects, research, organizations, and education
+- [Résumé (PDF)](https://jwoolson.com/resume): Current résumé, version 45 (2026)
+
+## Projects
+
+- [ArxLibrys](https://arxlibrys.com): Software company building ArxLibrys Arxv, a local-first project memory layer for macOS
+- [Listening Pictures](https://listening.pictures): Short documentary films about ecology, recovery, and balance, filmed around Fredonia and the Lake Erie shore
+
+## Research & Publications
+
+- [GenAI Impact on Higher Ed Web Marketing (2025)](https://www.academia.edu/146209350/GenAI_Impact_on_Higher_Ed_Web_Marketing): Research paper on generative AI, search evolution, and GEO for institutional marketing
+- [Building a Homegrown University Portal with a Tiny Team (2023)](https://www.academia.edu/175462398/Building_a_Homegrown_University_Portal_with_a_Tiny_Team_by_SUNY_Fredonia_Web_Team_2023): HighEdWeb 2023 talk with Andrea Wasiura on building my.fredonia.edu in Drupal
+- [Web Research Report (2009)](https://www.academia.edu/2635779/Web_Research_Report): SUNY Fredonia web CMS requirements study; its ECM model is cited in a University of Porto master's dissertation (Casais, 2010)
+- [Academia.edu profile](https://fredonia.academia.edu/jwoolson): All papers, reports, and presentations
+
+## Professional Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/jwoolson)
+- [Drupal.org](https://drupal.org/u/jwoolson): Drupal community member since 2005
+- [GitHub](https://github.com/jwoolson)
+- [Digital Center of Excellence (DCoE)](https://dcoe.org/user/jwoolson)
+- [Workspaces Revealed, Link Journal (2024)](https://link.digicol.org/2024/02/workspaces-revealed-jonathan-woolson): Digital Collegium (HighEdWeb) feature
+
+## Optional
+
+- [About.me](https://jwoolson.com/about)
+- [YouTube](https://jwoolson.com/youtube)
+- [Favorite TED Talks](https://jwoolson.com/ted): Curated list of TED talks

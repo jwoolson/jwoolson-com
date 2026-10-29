@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Share Banner Preview (1200×630) | jwoolson.com</title>
+  <style>
+    :root {
+      --bg-page: #070a12;
+      --bg-surface: #0f172a;
+      --border: rgba(255, 255, 255, 0.1);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent: #38bdf8;
+      --accent-teal: #2dd4bf;
+      --accent-emerald: #10b981;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: ui-monospace, Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    .preview-container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .header-bar {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+    .header-desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .banner-wrapper {
+      margin-bottom: 50px;
+      background: #000000;
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      border: 1px solid var(--border);
+    }
+
+    .banner-wrapper img, .banner-wrapper svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .meta-tag-strip {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-bottom: 50px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: #7dd3fc;
+      overflow-x: auto;
+    }
+
+    /* Social Feed Mockup Section */
+    .mockups-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .mockup-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .mockup-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .platform-tag {
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* LinkedIn Card Simulator */
+    .linkedin-card {
+      background: #1b1f23;
+      border: 1px solid #38434f;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .linkedin-card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1200 / 630;
+      object-fit: cover;
+    }
+    .linkedin-meta {
+      padding: 14px 16px;
+      background: #1b1f23;
+      border-top: 1px solid #38434f;
+    }
+    .linkedin-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .linkedin-domain {
+      font-size: 0.78rem;
+      color: #94a3b8;
+    }
+
+    /* Twitter Large Card Simulator */
+    .twitter-card {
+      background: #000000;
+      border: 1px solid #2f3336;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .twitter-card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1200 / 630;
+      object-fit: cover;
+    }
+    .twitter-meta {
+      padding: 12px 16px;
+    }
+    .twitter-domain {
+      font-size: 0.8rem;
+      color: #71767b;
+      margin-bottom: 2px;
+    }
+    .twitter-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #e7e9ea;
+    }
+
+    /* Comparison Section */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .comp-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .comp-box h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .comp-box p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #0b0f19;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+
+    @media (max-width: 900px) {
+      .mockups-grid { grid-template-columns: 1fr; }
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-container">
+    <div class="header-bar">
+      <div>
+        <h1 class="header-title">1200×630 Designed Social Share Banner</h1>
+        <p class="header-desc">Full 1.91:1 banner design for <code>jwoolson.com</code> and live feed simulator</p>
+      </div>
+      <a href="jwoolson-social-banner.svg" target="_blank" class="btn">Open Raw 1200×630 SVG Banner &rarr;</a>
+    </div>
+
+    <!-- 1. Full 1200x630 Designed Social Banner -->
+    <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px;">Full-Resolution Banner (1200 &times; 630 px)</h2>
+    <div class="banner-wrapper">
+      <img src="jwoolson-social-banner.svg" alt="Jonathan H. Woolson 1200x630 Social Banner" width="1200" height="630">
+    </div>
+
+    <!-- 2. Meta Tags Configuration -->
+    <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px;">Corresponding HTML Meta Configuration</h2>
+    <div class="meta-tag-strip">
+      <p>&lt;!-- Open Graph 1200x630 Banner --&gt;</p>
+      <p>&lt;meta property="og:image" content="https://jwoolson.com/jwoolson-social-banner.svg"&gt;</p>
+      <p>&lt;meta property="og:image:width" content="1200"&gt;</p>
+      <p>&lt;meta property="og:image:height" content="630"&gt;</p>
+      <p>&lt;meta property="og:image:type" content="image/svg+xml"&gt;</p>
+      <p style="margin-top: 8px;">&lt;!-- Twitter / X Large Card (Full-width banner format) --&gt;</p>
+      <p>&lt;meta name="twitter:card" content="summary_large_image"&gt;</p>
+      <p>&lt;meta name="twitter:image" content="https://jwoolson.com/jwoolson-social-banner.svg"&gt;</p>
+    </div>
+
+    <!-- 3. Social Media Feed Previews -->
+    <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px;">Simulated Social Media Feed Previews</h2>
+    <div class="mockups-grid">
+      
+      <!-- LinkedIn Preview -->
+      <div class="mockup-card">
+        <div class="mockup-header">
+          <span class="platform-tag">LinkedIn Feed Share</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Full-Bleed 1.91:1 Card</span>
+        </div>
+        <div class="linkedin-card">
+          <img src="jwoolson-social-banner.svg" alt="LinkedIn preview banner">
+          <div class="linkedin-meta">
+            <div class="linkedin-title">Jonathan H. Woolson | Web Developer &amp; Enterprise CMS Consultant</div>
+            <div class="linkedin-domain">jwoolson.com &bull; 1 min read</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Twitter / X Preview -->
+      <div class="mockup-card">
+        <div class="mockup-header">
+          <span class="platform-tag">Twitter / X Card</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">summary_large_image</span>
+        </div>
+        <div class="twitter-card">
+          <img src="jwoolson-social-banner.svg" alt="Twitter card preview banner">
+          <div class="twitter-meta">
+            <div class="twitter-domain">jwoolson.com</div>
+            <div class="twitter-title">Jonathan H. Woolson | Web Developer &amp; Enterprise CMS Consultant</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4. Format Comparison -->
+    <div class="comparison-grid">
+      <div class="comp-box">
+        <h3>1200 &times; 630 Banner (`summary_large_image`)</h3>
+        <p><strong>Pros:</strong> Commands visual attention in desktop and mobile social feeds (LinkedIn, Twitter/X, Facebook, Slack). Allows displaying your portrait alongside key credentials, metrics, and branding without headshot cropping.</p>
+        <p><strong>Best for:</strong> Social media posts, sharing articles/portfolio links in public feeds.</p>
+      </div>
+      <div class="comp-box">
+        <h3>1:1 Square Thumbnail (`summary`)</h3>
+        <p><strong>Pros:</strong> Compact, personal, and clean. Keeps the focus purely on your face. Fits naturally in messaging bubbles (iMessage, WhatsApp, SMS) and compact list feeds.</p>
+        <p><strong>Best for:</strong> Direct messaging links, professional directories, contact cards.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
