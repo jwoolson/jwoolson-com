@@ -16,11 +16,11 @@ jwoolson.com is a single-page professional profile and résumé. Key facts:
 ## Profile
 
 - [Home / full profile](https://jwoolson.com/): Experience, skills matrix, projects, research, organizations, and education
-- [Résumé (PDF)](https://jwoolson.com/resume): Current résumé, version 45 (2026)
+- [Résumé (PDF)](https://jwoolson.com/resume): Current résumé PDF, version 47 (2026)
 
 ## Projects
 
-- [ArxLibrys](https://arxlibrys.com): Software company building ArxLibrys Arxv, a local-first project memory layer for macOS
+- [Arkeotype](https://arkeotype.com): Software company building the Arkeotype App, a local-first project memory layer for macOS
 - [Listening Pictures](https://listening.pictures): Short documentary films about ecology, recovery, and balance, filmed around Fredonia and the Lake Erie shore
 
 ## Research & Publications
